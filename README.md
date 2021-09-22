@@ -1,6 +1,6 @@
 # A Twitter For Dev Careers
 
-I tend to be off [twitter](https://twitter.com/) for more than 24 hours, so I built a twitter bot to monitor @dev_careers handle so I don't miss out cohort 3 application 
+I tend to be off [twitter](https://twitter.com/) for more than 24 hours, so I built a twitter bot to monitor [@dev_careers](https://twitter.com/dev_careers) handle so I don't miss out cohort 3 application 
 
 
 ## Setup
