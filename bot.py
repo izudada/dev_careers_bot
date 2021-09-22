@@ -23,10 +23,6 @@ tweets = api.user_timeline(screen_name=name,
                            # otherwise only the first 140 words are extracted
                            tweet_mode = 'extended'
                            )
-try:
-    api.retweet(tweets[0].id)
-except:
-    print('You have retweeted this tweet')
 
 sender = 'from@fromdomain.com'
 receiver = 'tonyudeagbala@gmail.com'
@@ -52,11 +48,13 @@ new_date = datetime.strptime(str(tweets[0].created_at), '%Y-%m-%d %H:%M:%S')
 last_date = datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
 
 try:
-    if new_date > last_date:
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD )
-        server.sendmail(sender, receiver, message)         
-        print("Successfully sent email")
+    # if new_date > last_date:
+
+    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD )
+    server.sendmail(sender, receiver, message)         
+    print("Successfully sent email")
+    api.retweet(tweets[0].id)
 except Exception as e:
     print(e)
     print("Error: unable to send email")
