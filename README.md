@@ -20,4 +20,16 @@ then to activate a virtual enviroment:
 ```sh
 $ pipenv shell
 ```
+
+Then install the dependencies with:
+
+```sh
+(env)$ pip install -r requirements.txt
+```
+
+To run:
+```sh
+(env)$ python bot.py
+```
+
 You will apply for a twitter developer account at [here](https://developer.twitter.com/) to get your acess keys and user access keys
