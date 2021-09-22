@@ -23,8 +23,10 @@ tweets = api.user_timeline(screen_name=name,
                            # otherwise only the first 140 words are extracted
                            tweet_mode = 'extended'
                            )
-
-api.retweet(tweets[0].id)
+try:
+    api.retweet(tweets[0].id)
+except:
+    print('You have retweeted this tweet')
 
 sender = 'from@fromdomain.com'
 receiver = 'tonyudeagbala@gmail.com'
